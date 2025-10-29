@@ -43,7 +43,7 @@ struct ContentView: View {
         VStack {
             CategoryView(selectedCategory: $selectedCategory, categories: $categories)
                 .padding(.top)
-                .onChange(of: categories) { newCategories in
+                .onChange(of: categories) {
                     saveCategories()
                 }
             ListView(snippets: $snippets, selectedCategory: $selectedCategory, editingSnippet: $editingSnippet, editingTitle: $editingTitle, editingContent: $editingContent, showToast: $showToast)
